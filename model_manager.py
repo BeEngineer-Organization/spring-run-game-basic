@@ -11,7 +11,7 @@ from direct.actor.Actor import Actor
 PATH_ROAD_TEXTURE = "textures/asphalt.jpg"
 PATH_TUNNEL_TEXTURE = "textures/tunnel.jpg"
 PATH_CAR = "models/car.glb"
-PATH_TUNNLE = "models/tunnel"
+PATH_TUNNLE = ""
 # プレイヤーのパスを設定
 PATH_PLAYER = "models/player.glb"
 
@@ -156,10 +156,6 @@ class Scene:
 
         # 道をインスタンス化する
         self.road = Road()
-
-        for y in range(15):
-            self.tunnel = Tunnel()
-            self.tunnel.setPos(0, y * 40, 0)
 
 
 if __name__ == "__main__":
