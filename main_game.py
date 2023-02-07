@@ -82,9 +82,8 @@ class Main(ShowBase):
 
         # プレイヤーのインスタンス化
         self.player = Player()
-        # カメラを追随する
 
-        # プレイヤーが初期位置のときに車を発生させる
+        # カメラを追随する
 
         # プレイヤーを物理ワールドにアタッチする
         self.scene.physical_world.attachRigidBody(self.player.node())
@@ -120,10 +119,12 @@ class Main(ShowBase):
         if len(self.cars) < self.max_cars:
             c_x = random.choice(self.spawn_x)
             car = Car()
+
             # 常にプレイヤーの前方から発生する
             c_y = p_y + 100
             car.setPos(c_x, c_y, 0)
             self.cars.append(car)
+
             # 物理ワールドにリジッドボディをアタッチする
             for car in self.cars:
                 self.scene.physical_world.attachRigidBody(car.node())
@@ -155,6 +156,7 @@ class Main(ShowBase):
             for car in self.cars:
                 # 車を走らせる処理
                 car.setY(car, car.velocity)
+
                 # 通り過ぎた車を消去する処理
                 if car.getY() < self.player.p_y:
                     # 車のリジッドボディを削除する
@@ -171,9 +173,11 @@ class Main(ShowBase):
                 if self.result.getNumContacts() > 0:
                     self.is_contact = True
                     if self.game_over_scene.game_over_screen.isHidden():
+
                         # 効果音の切り替え
                         self.se.sound_foot.stop()
                         self.se.sound_explosion.play()
+
                         # 画面の表示
                         self.game_over_scene.final_score_label["text"] = "%s(m)" % (
                             format(self.player.p_y, ".2f")
