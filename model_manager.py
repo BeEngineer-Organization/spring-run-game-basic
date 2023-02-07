@@ -26,7 +26,6 @@ class Player(NodePath):
         self.actor.setScale(1)
 
         # 向きと位置を設定
-
         self.actor.reparentTo(self)
         self.actor.loop("running")
 
@@ -37,7 +36,9 @@ class Player(NodePath):
         center = tip - half
         self.node().addShape(BulletBoxShape(half), TransformState.makePos(center))
 
-        # プレイヤーの座標
+        # プレイヤーが進んだ距離
+        self.p_x = 0
+        self.p_y = 0
 
         # プレイヤーの速度
 

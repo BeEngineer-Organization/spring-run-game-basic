@@ -1,7 +1,7 @@
 from direct.showbase.ShowBase import ShowBase
 from direct.showbase.ShowBaseGlobal import globalClock
 from panel_manager import GameStartScene, GameOverScene
-from model_manager import Scene,Player, Car
+from model_manager import Scene, Player, Car
 from sound_manager import SE, BGM
 import random
 
@@ -62,7 +62,6 @@ class Main(ShowBase):
         # 初期設定ではゲームオーバーシーンは非表示
         self.game_over_scene.game_over_screen.hide()
 
-
     # スタート画面でスタートが押された時にメインに移る関数
     def start(self):
         # ゲームスタート時には画面を非表示にする
@@ -86,7 +85,6 @@ class Main(ShowBase):
         # カメラを追随する
 
         # プレイヤーが初期位置のときに車を発生させる
-        self.spawn_car(p_y=0)
 
         # プレイヤーを物理ワールドにアタッチする
         self.scene.physical_world.attachRigidBody(self.player.node())
