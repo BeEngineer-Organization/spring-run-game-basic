@@ -13,7 +13,7 @@ PATH_TUNNEL_TEXTURE = "textures/tunnel.jpg"
 PATH_CAR = "models/car.glb"
 PATH_TUNNLE = ""
 # プレイヤーのパスを設定
-PATH_PLAYER = "models/player.glb"
+PATH_PLAYER = "models/player2.glb"
 
 
 # プレイヤー
@@ -82,6 +82,7 @@ class Car(NodePath):
         self.model = base.loader.loadModel(PATH_CAR)
         self.model.setName("carModel")
         self.model.setScale(0.1)
+        self.model.setHpr(0, 90, 0)
         self.model.reparentTo(self)
 
         # リジッドボディの設定
