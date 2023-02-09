@@ -65,13 +65,6 @@ class Tunnel(NodePath):
     def __init__(self):
         super().__init__(PandaNode("tunnel"))
         self.reparentTo(base.render)
-        self.model = base.loader.loadModel(PATH_TUNNLE)
-        self.model.setName("tunnelModel")
-        self.model.setScale(0.8)
-        self.model.setHpr(0, 90, 0)
-        tex = base.loader.loadTexture(PATH_TUNNEL_TEXTURE)
-        self.model.setTexture(tex)
-        self.model.reparentTo(self)
 
 
 # 車の障害物
