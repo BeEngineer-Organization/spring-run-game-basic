@@ -13,7 +13,7 @@ PATH_TUNNEL_TEXTURE = "textures/tunnel.jpg"
 PATH_CAR = "models/car.glb"
 PATH_TUNNLE = ""
 # プレイヤーのパスを設定
-PATH_PLAYER = "models/player2.glb"
+PATH_PLAYER = "models/player.glb"
 
 
 # プレイヤー
