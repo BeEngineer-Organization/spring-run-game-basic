@@ -75,7 +75,6 @@ class Car(NodePath):
         self.model = base.loader.loadModel(PATH_CAR)
         self.model.setName("carModel")
         self.model.setScale(0.1)
-        self.model.setHpr(0, 90, 0)
         self.model.reparentTo(self)
 
         # リジッドボディの設定
