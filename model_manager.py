@@ -11,7 +11,7 @@ from direct.actor.Actor import Actor
 PATH_ROAD_TEXTURE = "textures/asphalt.jpg"
 PATH_TUNNEL_TEXTURE = "textures/tunnel.jpg"
 PATH_CAR = "models/car.glb"
-PATH_TUNNLE = ""
+PATH_TUNNEL = ""
 # プレイヤーのパスを設定
 PATH_PLAYER = "models/player.glb"
 
